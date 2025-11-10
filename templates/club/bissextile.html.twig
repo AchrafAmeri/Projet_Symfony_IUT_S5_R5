@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Test Année Bissextile{% endblock %}
+
+{% block body %}
+    <h1>Test d'année bissextile</h1>
+
+    <ul>
+        <li>Valeur passée : {{ valeur }}</li>
+        <li>Année actuelle : {{ anneeActuelle }}</li>
+        <li>Somme ({{ valeur }} + {{ anneeActuelle }}) = {{ anneeResultat }}</li>
+    </ul>
+
+    {% if estBissextile %}
+        <p style="color: green;">✅ L'année {{ anneeResultat }} est bissextile !</p>
+    {% else %}
+        <p style="color: red;">❌ L'année {{ anneeResultat }} n'est pas bissextile.</p>
+    {% endif %}
+{% endblock %}
